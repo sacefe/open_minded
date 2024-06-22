@@ -26,7 +26,7 @@ from typing import List
 # im_resized = cv2.resize(im, (224, 224), interpolation=cv2.INTER_LINEAR)
 # plt.imshow(cv2.cvtColor(im_resized, cv2.COLOR_BGR2BGRA))
 
-class Solution():
+class Water_Containers():
     def maxArea(self, height: List[int]) -> int:
         n =len(height) - 1
         p1, p2 = 0, n
@@ -42,6 +42,6 @@ class Solution():
 
 if __name__ == "__main__":
     container= [1,8,6,2,5,4,8,3,7]
-    objSol= Solution()
+    objSol= Water_Containers()
     print( objSol.maxArea(	container ) )
 

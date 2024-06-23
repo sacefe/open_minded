@@ -1,17 +1,17 @@
 # from unittest import TestCase
 import pytest
-from arrays.container_With_Most_Water_11 import *
-from arrays.longest_Substring_wo_Repeating_Characters_3 import *
-from arrays.sum3_15 import *
+from src.arrays.container_With_Most_Water_11 import Water_Containers
+from src.arrays.longest_Substring_wo_Repeating_Characters_3 import *
+from src.arrays.sum3_15 import *
 
-class Test_container_With_Most_Water(): #(TestCase): 
+class Test_Water_Containers(): #(TestCase): 
     def test_always_passes(self):
         height= [1,8,6,2,5,4,8,3,7]
         obj= Water_Containers()
         assert obj.maxArea(height) == 49
         
 
-class Test_lengthOfLongestSubstring():  #(TestCase): 
+class Test_lengthOfLongestSubpytesttring():  #(TestCase): 
     def test_always_passes(self):
         s = "abcabcbb"
         obj=  LLS_woRepetingCaharcter()

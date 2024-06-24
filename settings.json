@@ -6,7 +6,7 @@
     ],
     "python.testing.pytestArgs": [
         ".",
-        "--verbose",
+        "--verbose"
     ],
     "python.linting.enabled": true,
     "python.testing.unittestEnabled": false,

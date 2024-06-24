@@ -1,0 +1,15 @@
+{
+    "python.analysis.extraPaths": [
+        "./src",
+        "./src/arrays",
+        // "/tests"
+    ],
+    "python.testing.pytestArgs": [
+        ".",
+        "--verbose"
+    ],
+    "python.linting.enabled": true,
+    "python.testing.unittestEnabled": false,
+    "python.testing.pytestEnabled": true,
+    // "python.testing.cwd": "${workspaceFolder}/tests",
+}

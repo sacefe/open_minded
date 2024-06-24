@@ -47,6 +47,8 @@ class Sum3():
                 complement = -(numsS[i] + numsS[j])
                 if complement in seen:
                     triList.append([numsS[i], numsS[j], complement])
+                    while j+1 < len(numsS) and  numsS[j] == numsS[j+1]:
+                        j +=1
                 seen.add(numsS[j])
                 j += 1
 

@@ -5,7 +5,8 @@
         // "/tests"
     ],
     "python.testing.pytestArgs": [
-        "."
+        ".",
+        "--verbose"
     ],
     "python.linting.enabled": true,
     "python.testing.unittestEnabled": false,

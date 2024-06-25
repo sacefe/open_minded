@@ -4,6 +4,7 @@ from src.arrays.container_With_Most_Water_11 import Water_Containers
 from src.arrays.longest_Substring_wo_Repeating_Characters_3 import *
 from src.arrays.sum3_15 import *
 from src.arrays.next_permutation_31 import *
+from src.arrays.multiply_Strings_43 import *
 
 class Test_Water_Containers(): #(TestCase): 
     def test_always_passes(self):
@@ -11,6 +12,14 @@ class Test_Water_Containers(): #(TestCase):
         obj= Water_Containers()
         assert obj.maxArea(height) == 49
         
+class Test_MultiplybyString():
+    def test_always_passed(self):
+        num1, num2 = "2", "3"
+        obj = Multiply()
+        obj.multiply(num1, num2) == "6"
+
+        num1, num2 = "123", "456"
+        obj.multiply(num1, num2) == "56088"
 
 class Test_Next_permutation_31():
     def test_alwats_passed(self):

@@ -5,13 +5,29 @@ from src.arrays.longest_Substring_wo_Repeating_Characters_3 import *
 from src.arrays.sum3_15 import *
 from src.arrays.next_permutation_31 import *
 from src.arrays.multiply_Strings_43 import *
+from src.arrays.rotate_Image_48 import *
 
 class Test_Water_Containers(): #(TestCase): 
     def test_always_passes(self):
         height= [1,8,6,2,5,4,8,3,7]
         obj= Water_Containers()
         assert obj.maxArea(height) == 49
-        
+
+class Test_Rotate():
+    def test_matrix(self):
+        obj2Test= Rotate()
+        testcases= {
+            "t1" : ([[1,2,3],[4,5,6],[7,8,9]], [[7,4,1],[8,5,2],[9,6,3]]), 
+            "t2" : ([[5,1,9,11],[2,4,8,10],[13,3,6,7],[15,14,12,16]], [[15,13,2,5],[14,3,4,1],[12,6,8,9],[16,7,10,11]])
+        }
+        for _, test in testcases.items():
+            print(test)
+            obj2Test.rotate(test[0])
+            assert test[0] == test[1] 
+            
+
+    
+
 class Test_MultiplybyString():
     def test_always_passed(self):
         num1, num2 = "2", "3"

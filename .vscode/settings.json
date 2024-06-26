@@ -2,7 +2,7 @@
     "python.analysis.extraPaths": [
         "./src",
         "./src/arrays",
-        "/tests"
+        "/testsuite"
     ],
     "python.testing.pytestArgs": [
         ".",

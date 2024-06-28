@@ -37,3 +37,25 @@ if __name__ == "__main__":
     s = "dvdf"
     obj= LLS_woRepetingCaharcter()
     print(obj.lengthOfLongestSubstring(s))
+
+
+#############################################
+# to run the test here un comment this code 
+# and rename the file starting with test_
+##############################################
+# import pytest
+# class Test_lengthOfLongestSubpytesttring():  #(TestCase): 
+#     @pytest.mark.parametrize("s, expected",[
+#         ("abcabcbb", 3),
+#         ("bbbbb", 1 ),
+#         ("pwwkew", 3 ),
+#         ("abba", 2),
+#         ("dvdf", 3),
+#         (" ", 1)
+#     ])
+#     def test_always_passes(self, s,  expected):
+#         # s = "abcabcbb"
+#         obj=  LLS_woRepetingCaharcter()
+#         assert obj.lengthOfLongestSubstring(s) == expected
+
+# pytest.main(['-v'])

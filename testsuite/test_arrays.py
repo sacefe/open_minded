@@ -25,9 +25,6 @@ class Test_Rotate():
             obj2Test.rotate(test[0])
             assert test[0] == test[1] 
             
-
-    
-
 class Test_MultiplybyString():
     def test_always_passed(self):
         num1, num2 = "2", "3"
@@ -38,41 +35,46 @@ class Test_MultiplybyString():
         obj.multiply(num1, num2) == "56088"
 
 class Test_Next_permutation_31():
-    def test_alwats_passed(self):
+    @pytest.mark.parametrize("nums, expected",[
+        ([1,2,3], [1,3,2]),
+        ([3,2,1], [1,2,3] ),
+        ([1,1,5], [1,5,1]),
+    ])
+    def test_alwats_passed(self, nums, expected):
         nums = [1,2,3]
         obj = Next_Permutation()
         obj.nextPermutation(nums)
         assert nums == [1,3,2]
 
-        nums = [3,2,1]
-        obj.nextPermutation(nums)
-        assert nums == [1,2,3]
-
-        nums = [1,1,5]
-        obj.nextPermutation(nums)
-        assert nums == [1,5,1]
-
-
 class Test_lengthOfLongestSubpytesttring():  #(TestCase): 
-    def test_always_passes(self):
-        s = "abcabcbb"
+    @pytest.mark.parametrize("s, expected",[
+        ("abcabcbb", 3),
+        ("bbbbb", 1 ),
+        ("pwwkew", 3 ),
+        ("abba", 2),
+        ("dvdf", 3),
+        (" ", 1)
+    ])
+    def test_always_passes(self, s,  expected):
+        # s = "abcabcbb"
         obj=  LLS_woRepetingCaharcter()
-        assert obj.lengthOfLongestSubstring(s) == 3
+        assert obj.lengthOfLongestSubstring(s) == expected
+        # assert obj.lengthOfLongestSubstring(s) == 3
 
-        s = "bbbbb" 
-        assert obj.lengthOfLongestSubstring(s) == 1
+        # s = "bbbbb" 
+        # assert obj.lengthOfLongestSubstring(s) == 1
 
-        s = "pwwkew" 
-        assert obj.lengthOfLongestSubstring(s) == 3
+        # s = "pwwkew" 
+        # assert obj.lengthOfLongestSubstring(s) == 3
 
-        s = "abba" 
-        assert obj.lengthOfLongestSubstring(s) == 2
+        # s = "abba" 
+        # assert obj.lengthOfLongestSubstring(s) == 2
 
-        s = "dvdf"
-        assert obj.lengthOfLongestSubstring(s) == 3
+        # s = "dvdf"
+        # assert obj.lengthOfLongestSubstring(s) == 3
 
-        s = " "
-        assert obj.lengthOfLongestSubstring(s) == 1
+        # s = " "
+        # assert obj.lengthOfLongestSubstring(s) == 1
 
 class Test_sum3(): 
     def test_always_passed(self):
@@ -92,3 +94,5 @@ class Test_sum3():
         nums = [0,0,0]
         assert obj.threeSum(nums) == [[0,0,0]]
         # Explanation: The only possible triplet sums up to 0.
+
+# pytest.main(['-v'])

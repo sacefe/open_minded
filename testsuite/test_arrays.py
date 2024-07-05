@@ -107,6 +107,18 @@ class TestPlusOne():
         output= sumatory.plusOne(digits)
         assert output == expected
 
+from src.arrays.reshape_the_Matrix_566 import ReshapeMatrix
+class Test_ReshapeMatrix():
+    @pytest.fixture
+    def reshaper(self):
+        return ReshapeMatrix()
+    @pytest.mark.parametrize("mat, r, c, expected", [
+        ([[1,2],[3,4]], 1, 4, [[1,2,3,4]]),
+        ([[1,2],[3,4]], 2, 4, [[1,2],[3,4]])
+    ])
+    def test_reshapeMatrix(self, reshaper, mat, r, c, expected):
+        res= reshaper.matrixReshape(mat, r, c)
+        assert res == expected
 
 from src.arrays.rotate_Image_48 import Rotate
 class Test_Rotate():

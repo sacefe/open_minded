@@ -20,7 +20,21 @@ class Test_Water_Containers(): #(TestCase):
         obj= Water_Containers()
         assert obj.maxArea(height) == 49
 
-
+from src.arrays.kids_With_the_Greatest_Number_of_Candies_1431 import KidsGreatestNumberCandies
+class Test_KidsGreatestNumberCandies:
+    @pytest.fixture
+    def analizer(self):
+        return KidsGreatestNumberCandies()
+    
+    @pytest.mark.parametrize("candies, extraCandies, expected",[
+        ([2,3,5,1,3], 3, [True,True,True,False,True] ),
+        ([4,2,1,1,2], 1, [True,False,False,False,False]),
+        ([12,1,12], 10, [True,False,True])
+    ])
+    def test_KidsGreatestCandies(self, analizer,candies, extraCandies, expected):
+        res= analizer.kidsWithCandies(candies, extraCandies)
+        assert res == expected
+            
 from src.arrays.longest_Substring_wo_Repeating_Characters_3 import LLS_woRepetingCaharcter
 class Test_lengthOfLongestSubpytesttring():  #(TestCase): 
     @pytest.mark.parametrize("s, expected",[

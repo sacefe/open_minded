@@ -14,5 +14,16 @@ class Test_PassPillow:
         tobj= Pass_the_Pillow()
         assert tobj.passThePillow(n, time) == expected
 
+from src.math_problems.roman_to_Integer_13 import RomanToIntSolution
+class Test_romanToInt():
+    @pytest.mark.parametrize("s, expected",{
+        ("III", 3),
+        ("LVIII", 58),
+        ("MCMXCIV", 1994)
+    })
+    def test_romantoInt(self, s, expected):
+        tObj= RomanToIntSolution()
+        myRomanInt= tObj.romanToInt(s) 
+        assert myRomanInt == expected
+
  
-pytest.main(['-v'])

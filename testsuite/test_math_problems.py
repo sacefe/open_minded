@@ -26,4 +26,15 @@ class Test_romanToInt():
         myRomanInt= tObj.romanToInt(s) 
         assert myRomanInt == expected
 
- 
+from src.math_problems.power_of_Three_326 import Solution_isPowerOfThree
+class Test_isPowerOfThree(): 
+    @pytest.mark.parametrize("n, expected", [
+        (27, True),
+        (9, True),
+        (0, False),
+        (-1, False),
+        (81, True)
+    ])
+    def tes_isPowTree(self, n, expected):
+        tObj= Solution_isPowerOfThree()
+        assert tObj.isPowerOfThree(n) == expected

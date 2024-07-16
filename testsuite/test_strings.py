@@ -41,3 +41,15 @@ class Test_Reverse_Words_in_a_String_151:
     @COMMON_ARG
     def test_reverseWords_discreate(self, reverser, input, output):
         assert reverser.reverseWords_discreate(input) == output
+        
+        
+from src.strings.valid_Palindrome_125 import Solution_isPalindrome
+class Test_Solution_isPalindrome:
+    @pytest.mark.parametrize("s, expected", [
+        ("A man, a plan, a canal: Panama", True),
+        (" ", True),
+        ("race a car", False)
+    ])
+    def test_isPalindrome(self, s, expected):
+        tobj= Solution_isPalindrome()
+        assert tobj.isPalindrome(s) == expected
